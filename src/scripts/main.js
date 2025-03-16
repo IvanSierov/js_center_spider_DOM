@@ -5,11 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const spider = document.querySelector('.spider');
 
   function centerSpider() {
-    const wallRect = wall.getBoundingClientRect();
     const spiderRect = spider.getBoundingClientRect();
 
-    const centerX = (wallRect.width - spiderRect.width) / 2;
-    const centerY = (wallRect.height - spiderRect.height) / 2;
+    const centerX = (wall.clientWidth - spiderRect.width) / 2;
+    const centerY = (wall.clientHeight - spiderRect.height) / 2;
 
     spider.style.left = `${centerX}px`;
     spider.style.top = `${centerY}px`;
